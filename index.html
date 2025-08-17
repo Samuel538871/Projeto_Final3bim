@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportShop</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Menu Acessibilidade -->
+  <div class="menu-acessibilidade">
+    <button id="botao-acessibilidade" aria-expanded="false" aria-controls="opcoes-acessibilidade" class="btn btn-warning">
+      ♿
+    </button>
+    <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
+      <button id="aumentar-fonte" class="btn btn-secondary">A+</button>
+      <button id="diminuir-fonte" class="btn btn-secondary">A-</button>
+      <button id="alterna-contraste" class="btn btn-dark">Contraste</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-dark text-white py-4">
+    <nav class="container d-flex justify-content-between align-items-center">
+      <a href="#inicio">
+        <img src="img/logo_sport.png" class="nav-img" alt="Logo da SportShop" width="150" loading="lazy">
+      </a>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link text-white" href="#inicio">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#produtos">Produtos</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Início -->
+    <section id="inicio" class="text-center my-5">
+      <div class="inicio-fundo d-flex flex-column justify-content-center align-items-start text-white">
+        <div class="overlay"></div>
+        <div class="esquerda-conteudo position-relative">
+          <h1 class="display-4 fw-bold">Bem-vindo à SportShop!</h1>
+          <p class="fs-4">Tudo para o seu esporte favorito em um só lugar.</p>
+          <a href="#produtos" class="btn btn-primary botao-inicio">Ver Produtos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="container my-5">
+      <h2 class="text-center mb-4">Nossos Produtos</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/tenis.webp" class="card-img-top" alt="Tênis de Corrida Azul" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Tênis de Corrida</h5>
+              <p class="card-text">Conforto e performance para suas corridas.</p>
+              <button class="btn btn-primary w-100">Comprar - R$ 299,99</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/Bola.png" class="card-img-top" alt="Bola de Futebol Profissional" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Bola de Futebol</h5>
+              <p class="card-text">Alta durabilidade e precisão para os jogos.</p>
+              <button class="btn btn-primary w-100">Comprar - R$ 149,99</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/luva de treino.webp" class="card-img-top" alt="Luva de Treino Preta" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Luva de Treino</h5>
+              <p class="card-text">Proteção e conforto para seus treinos.</p>
+              <button class="btn btn-primary w-100">Comprar - R$ 89,99</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre (melhorado) -->
+    <section id="sobre" class="sobre-sportshop py-5">
+      <div class="container text-center text-white">
+        <h2 class="mb-4">Sobre a SportShop</h2>
+        <p class="fs-5">
+          Na <strong>SportShop</strong>, acreditamos que o esporte é para todos!  
+          Somos apaixonados por oferecer equipamentos de alta qualidade que inspiram saúde, bem-estar e superação.  
+          Seja você um atleta profissional, um entusiasta do fitness ou alguém que está começando agora, aqui você encontra tudo o que precisa para alcançar seus objetivos.
+        </p>
+        <p class="fs-5">
+          Nossa missão é unir <em>inovação, desempenho e preço justo</em>, trazendo as melhores marcas do mercado e um atendimento dedicado para que cada cliente tenha a melhor experiência.
+        </p>
+        <a href="#produtos" class="btn btn-light mt-3">Conheça nossos produtos</a>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="my-5">
+      <div class="container p-5 formulario rounded-3 shadow-lg">
+        <h2 class="text-center mb-4">Entre em Contato</h2>
+        <form>
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" id="nome" class="form-control rounded-3" placeholder="Seu Nome">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control rounded-3" placeholder="Seu Email">
+          </div>
+          <div class="mb-3">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea id="mensagem" class="form-control rounded-3" rows="4" placeholder="Escreva sua mensagem..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 text-center">
+    <p>© 2025 SportShop - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

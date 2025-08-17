@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --laranja-claro: #FF862A;
+  --alto-contraste-fundo: #000000;
+  --alto-contraste-texto: #ffffff;
+  --alto-contraste-link: #ffd700;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Montserrat';
+}
+
+header {
+  background-color: #343a40;
+}
+
+section {
+  padding-bottom: 5rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.inicio-fundo {
+  position: relative;
+  background-image: url('img/banner-sport.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  width: 100%;
+  height: 500px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 🔥 camada escura */
+.inicio-fundo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  border-radius: 20px;
+}
+
+.esquerda-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.botao-inicio {
+  background-color: var(--laranja-claro);
+  border-radius: 30px;
+  border: none;
+  width: 14em;
+  height: 3em;
+  align-content: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--laranja-claro);
+}
+
+/* Produtos */
+.card {
+  border-radius: 10px;
+}
+
+/* Seção Sobre (melhorada) */
+.sobre-sportshop {
+  background: linear-gradient(to right, #0d6efd, #0a58ca);
+  color: #fff;
+  border-radius: 20px;
+  margin: 3rem auto;
+  padding: 4rem 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.sobre-sportshop h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
+}
+.sobre-sportshop p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+.sobre-sportshop .btn {
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+/* Formulário */
+.formulario {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.formulario button {
+  background-color: #0d6efd;
+  border: none;
+  font-weight: bold;
+}
+
+/* Menu Acessibilidade */
+.menu-acessibilidade {
+  position: fixed;
+  top: 2rem;
+  right: 20px;
+  z-index: 1000;
+}
+
+.rotacao-botao {
+  transform: rotate(-90deg);
+  transform-origin: right center;
+}
+
+.opcoes-acessibilidade {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+  margin-bottom: 5px;
+}
+
+.apresenta-lista {
+  display: none;
+}
+
+/* Alto contraste */
+.alto-contraste {
+  background-color: var(--alto-contraste-fundo);
+  color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+  background-color: var(--alto-contraste-fundo);
+  color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link {
+  color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
+  background-color: var(--alto-contraste-link);
+  color: var(--alto-contraste-fundo);
+}
